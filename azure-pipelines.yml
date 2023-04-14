@@ -24,7 +24,9 @@ parameters:
     type: string
 
 steps:
-- script: echo Hello, ${{ parameter.space }}!
+- script: |
+    echo Hello, ${{ parameter.space }}
+    echo ${{ parameter.action }}
   displayName: 'Print Selected Space'
 
 - script: |
